@@ -21,3 +21,4 @@ Prism locations:
 - Validation: `.prism/shared/validation/`
 - Spectrum state: `.prism/shared/spectrum/`
 - Personal notes: `.prism/local/`
+
