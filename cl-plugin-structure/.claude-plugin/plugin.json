@@ -1,7 +1,7 @@
 {
   "name": "cl-plugin-structure",
-  "version": "0.7.1",
-  "description": "Reference skill for the structure of plugins, skills, slash commands, hooks, MCP servers, and channels for Claude Code and Cowork — including the Folder Architecture routing-table pattern and token-optimization research.",
+  "version": "0.7.2",
+  "description": "Reference skill for the structure of plugins, skills, slash commands, hooks, MCP servers, and channels for Claude Code and Cowork — including the Folder Architecture routing-table pattern, the current Claude model line (Opus 4.8 / Sonnet 4.6 / Haiku 4.5) with effort levels and ultrathink, and full token-optimization research.",
   "author": {
     "name": "TheDigitalGriot"
   },
@@ -17,6 +17,9 @@
     "token-optimization",
     "routing-table",
     "claude-code",
-    "cowork"
+    "cowork",
+    "opus-4-8",
+    "effort-levels",
+    "ultrathink"
   ]
 }

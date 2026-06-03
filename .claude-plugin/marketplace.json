@@ -4,15 +4,15 @@
     "name": "TheDigitalGriot"
   },
   "metadata": {
-    "description": "Marketplace for the cl-plugin-structure plugin — comprehensive reference for building plugins, skills, slash commands, hooks, MCP servers, and channels for Claude Code and Cowork, with deep token-optimization research.",
-    "version": "0.7.1"
+    "description": "Marketplace for the cl-plugin-structure plugin — comprehensive reference for building plugins, skills, slash commands, hooks, MCP servers, and channels for Claude Code and Cowork, with deep token-optimization research and current-model-line guidance (Opus 4.8 / Sonnet 4.6 / Haiku 4.5).",
+    "version": "0.7.2"
   },
   "plugins": [
     {
       "name": "cl-plugin-structure",
       "source": "./cl-plugin-structure",
-      "description": "Use when creating, scaffolding, structuring, or validating plugins for Claude Code or Claude Cowork. Covers the .claude-plugin/plugin.json + marketplace manifest, component organization (agents, skills, slash commands, hooks, MCP/LSP servers, channels), agent/command/hook frontmatter, the .local.md per-project settings pattern, portable paths, surface compatibility, bundled validator scripts, the Folder Architecture routing-table pattern (CLAUDE.md → workspace rooms → on-demand skills), and the full development workflow.",
-      "version": "0.7.1",
+      "description": "Use when creating, scaffolding, structuring, or validating plugins for Claude Code or Claude Cowork. Covers the .claude-plugin/plugin.json + marketplace manifest, component organization (agents, skills, slash commands, hooks, MCP/LSP servers, channels), agent/command/hook frontmatter, the .local.md per-project settings pattern, portable paths, surface compatibility, bundled validator scripts, the Folder Architecture routing-table pattern (CLAUDE.md → workspace rooms → on-demand skills), the current Claude model line (Opus 4.8 / Sonnet 4.6 / Haiku 4.5) with effort levels and ultrathink, and the full development workflow.",
+      "version": "0.7.2",
       "author": "TheDigitalGriot",
       "keywords": [
         "claude-code",
@@ -24,7 +24,10 @@
         "mcp",
         "token-optimization",
         "context-engineering",
-        "routing-table"
+        "routing-table",
+        "opus-4-8",
+        "effort-levels",
+        "ultrathink"
       ]
     }
   ]
