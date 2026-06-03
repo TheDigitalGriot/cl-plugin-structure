@@ -1,7 +1,7 @@
 ---
 name: cl-plugin-structure
 description: Use when creating, scaffolding, structuring, or validating plugins for Claude Code or Claude Cowork. Covers the .claude-plugin/plugin.json + marketplace manifest, component organization (agents, skills, slash commands, hooks, MCP/LSP servers, channels), agent/command/hook frontmatter, the .local.md per-project settings pattern, portable paths, surface compatibility, bundled validator scripts, and development workflow. Use this whenever the user mentions building a plugin, a skill, a slash command, a hook, an MCP server, a marketplace, or asks about plugin.json/SKILL.md structure — even if they don't say "plugin" explicitly.
-version: 0.7.1
+version: 0.7.2
 ---
 
 # Plugin Structure for Claude Code and Cowork
@@ -248,6 +248,18 @@ When users install plugins into a project, the project's CLAUDE.md decides which
 **Plugin implication:** the plugin doesn't ship a CLAUDE.md — projects do. The plugin's job is to make its skills cleanly **routable**: precise description: frontmatter so a routing table can name the skill confidently, tight SKILL.md bodies so loading the skill doesn't blow the budget, and on-demand references so the skill itself does progressive disclosure inside it. Consider shipping example CLAUDE.md snippets in examples/ that show how to route to the plugin's skills.
 
 For the four-leaks audit framing, full routing-table syntax, room-file examples, and naming-convention patterns: [references/folder-architecture-routing.md](./references/folder-architecture-routing.md).
+
+## Model Configuration (Claude Code current model line)
+
+As of June 2026: `opus` resolves to **Opus 4.8** on Anthropic API, `sonnet` to **Sonnet 4.6**, `haiku` to **Haiku 4.5**. From Claude 4.6 onward, dateless IDs like `claude-opus-4-8` are **pinned snapshots**, not evergreen aliases — use the alias form (`model: opus`) for auto-updates, the full ID for pinning.
+
+Effort levels on Opus 4.7+: `low`, `medium`, `high`, `xhigh`, `max`. Default on Opus 4.8 is `high`. Set `effort: xhigh` in agent frontmatter for heavier reasoning; reserve `max` for one-shot critical work (it's session-only). The `ultrathink` keyword anywhere in a prompt triggers deeper reasoning on a single turn without changing session effort.
+
+For long-session work, append `[1m]` to the alias or pinned ID: `model: opus[1m]` opens the 1M-token context window. Useful for autonomous multi-story execution and compaction-survival-sensitive workflows.
+
+**Opus 4.8 requires Claude Code v2.1.154+.** Run `claude update` before relying on it.
+
+For the full per-provider alias resolution table, dateless-snapshot rule, effort-level matrix, currency-check protocol, and provider-specific env-var pins: [references/model-config.md](./references/model-config.md).
 ## Harness Architecture (load when building composed systems)
 
 When building or optimizing a **harness** — a composed system of skills + agents + hooks + modes + workspaces + tool policies — load [references/component-patterns.md § Harness Architecture](./references/component-patterns.md) for the full architectural framework and observation hook patterns.
