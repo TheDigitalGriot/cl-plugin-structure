@@ -1,0 +1,22 @@
+{
+  "name": "cl-plugin-structure",
+  "version": "0.7.0",
+  "description": "Reference skill for the structure of plugins, skills, slash commands, hooks, MCP servers, and channels for Claude Code and Cowork — including the Folder Architecture routing-table pattern and token-optimization research.",
+  "author": {
+    "name": "TheDigitalGriot"
+  },
+  "homepage": "https://github.com/TheDigitalGriot/cl-plugin-structure",
+  "repository": "https://github.com/TheDigitalGriot/cl-plugin-structure",
+  "license": "MIT",
+  "keywords": [
+    "plugin",
+    "skill",
+    "marketplace",
+    "hooks",
+    "mcp",
+    "token-optimization",
+    "routing-table",
+    "claude-code",
+    "cowork"
+  ]
+}
